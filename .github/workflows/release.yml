@@ -43,10 +43,10 @@ jobs:
       id: version_number
       env:
         SEMVER_TYPE: ${{ github.event.inputs.semver-type }}
-        TOKEN: ${{ secrets.BOT_SECRET }}
+        GH_TOKEN: ${{ secrets.BOT_SECRET }}
       run: |
         npx release-please@^14.1.0 bootstrap \
         --repo-url=philipp-hinteregger/release-please-test \
-        --token=$TOKEN \ 
+        --token=$GH_TOKEN \ 
         --release-type=go \
         --dry-run=true
