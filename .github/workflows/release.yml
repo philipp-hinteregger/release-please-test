@@ -47,6 +47,6 @@ jobs:
       run: |
         npx release-please@^14.1.0 bootstrap \
         --token=$TOKEN \ 
-        --repo-url=philipp-hinteregger/release-please-test \
+        --repo-url="philipp-hinteregger/release-please-test" \
         --release-type=go \
         --dry-run=true
