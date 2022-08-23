@@ -48,6 +48,6 @@ jobs:
         npx release-please@^14.1.0 github-release \
           --token="$GH_TOKEN" \
           --repo-url=philipp-hinteregger/release-please-test \
-          --dry-run=true
+          --skip-github-release=true
 
-        echo "$version"
+        cat .release-please-manifest.json
