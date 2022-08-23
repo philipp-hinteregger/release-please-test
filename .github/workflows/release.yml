@@ -50,5 +50,6 @@ jobs:
           --repo-url=philipp-hinteregger/release-please-test \
           --release-type=go \
           --include-v-in-tags=false \
-          --version \
           --dry-run
+
+        echo "$version"
