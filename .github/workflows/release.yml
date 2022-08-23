@@ -46,7 +46,7 @@ jobs:
         TOKEN: ${{ secrets.BOT_SECRET }}
       run: |
         npx release-please@^14.1.0 bootstrap \
+        --repo-url=philipp-hinteregger/release-please-test \
         --token=$TOKEN \ 
-        --repo-url="philipp-hinteregger/release-please-test" \
         --release-type=go \
         --dry-run=true
