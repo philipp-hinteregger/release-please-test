@@ -49,4 +49,6 @@ jobs:
         --repo-url=philipp-hinteregger/release-please-test \
         --token=$GH_TOKEN \ 
         --release-type=go \
+        --include-v-in-tags=false \
+        --version=true \
         --dry-run=true
