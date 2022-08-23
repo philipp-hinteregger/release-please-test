@@ -39,14 +39,19 @@ jobs:
         fetch-depth: 0
         token: ${{ secrets.BOT_SECRET }}
 
-    - name: Find next version number
-      id: version_number
-      env:
-        SEMVER_TYPE: ${{ github.event.inputs.semver-type }}
-        GH_TOKEN: ${{ secrets.BOT_SECRET }}
-      run: |
-        npx release-please@^14.1.0 release-pr \
-          --token="$GH_TOKEN" \
-          --repo-url=philipp-hinteregger/release-please-test
+    - name: Create release
+      uses: google-github-actions/release-please-action@v3
+        with:
+          token: ${{ secrets.BOT_SECRET }}
+          release-type: go
+          package-name: release-please-action
 
-        cat .release-please-manifest.json
+#    - name: Find next version number
+#      id: version_number
+#      env:
+#        SEMVER_TYPE: ${{ github.event.inputs.semver-type }}
+#        GH_TOKEN: ${{ secrets.BOT_SECRET }}
+#      run: |
+#        npx release-please@^14.1.0 release-pr \
+#          --token="$GH_TOKEN" \
+#          --repo-url=philipp-hinteregger/release-please-test
