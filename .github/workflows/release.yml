@@ -45,7 +45,7 @@ jobs:
         SEMVER_TYPE: ${{ github.event.inputs.semver-type }}
         GH_TOKEN: ${{ secrets.BOT_SECRET }}
       run: |
-        npx release-please@^14.1.0 github-release \
+        npx release-please@^14.1.0 release-pr \
           --token="$GH_TOKEN" \
           --repo-url=philipp-hinteregger/release-please-test
 
