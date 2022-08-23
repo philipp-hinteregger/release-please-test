@@ -1,0 +1,48 @@
+name: Release
+on:
+  workflow_dispatch:
+    inputs:
+      semver-type:
+      required: false
+    branches:
+      - 'master'
+      - '[0-9]+.[1-9][0-9]*.x'
+
+defaults:
+  run:
+    shell: bash
+jobs:
+  - name: Check SemVer input
+    env:
+      SEMVER_TYPE: ${{ github.event.inputs.semver-type }}
+    run: |
+      if [[ ! -z "$SEMVER_TYPE" ]]; then
+        echo "SemVer Type is defined. Checking for valid SemVer type..."
+        if [[ "$SEMVER_TYPE" == "major" ]] || [[ "$SEMVER_TYPE" == "minor" ]] || [[ "$SEMVER_TYPE" == "patch" ]]; then
+          echo "::notice::SemVer Type is correctly set to $SEMVER_TYPE! Continuing with this version bump..."
+        else
+          echo "::error::ERROR: Enforced SemVer does not match any of [major,minor,patch]!"
+          echo "Exiting..."
+          exit 1
+        fi
+      else
+        echo "::notice::No SemVer type defined, continuing with auto generated version number..."
+      fi
+
+  - name: Checkout repo
+    uses: actions/checkout@v3
+    with:
+      fetch-depth: 0
+      token: ${{ secrets.BOT_SECRET }}
+
+  - name: Find next version number
+    id: version_number
+    env:
+      SEMVER_TYPE: ${{ github.event.inputs.semver-type }}
+    run: |
+      npx release-please@14.1.0 \
+      --dry-run \
+      --token ${{ secrets.BOT_SECRET }} \ 
+      --repo-url philipp-hinteregger/release-please-test \
+      --release-type go \
+      --version-file ./VERSION.txt
