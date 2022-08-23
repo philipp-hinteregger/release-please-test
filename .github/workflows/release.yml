@@ -50,5 +50,5 @@ jobs:
         --token="$GH_TOKEN" \ 
         --release-type=go \
         --include-v-in-tags=false \
-        --version=true \
-        --dry-run=true
+        --version \
+        --dry-run
