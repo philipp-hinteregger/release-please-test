@@ -42,9 +42,9 @@ jobs:
     - name: Create release
       id: release
       uses: google-github-actions/release-please-action@v3
-        with:
-          token: ${{ secrets.BOT_SECRET }}
-          release-type: go
+      with:
+        token: ${{ secrets.BOT_SECRET }}
+        release-type: go
 
 #    - name: Find next version number
 #      id: version_number
