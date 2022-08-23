@@ -47,7 +47,7 @@ jobs:
       run: |
         npx release-please@^14.1.0 bootstrap \
         --repo-url=philipp-hinteregger/release-please-test \
-        --token=$GH_TOKEN \ 
+        --token="$GH_TOKEN" \ 
         --release-type=go \
         --include-v-in-tags=false \
         --version=true \
