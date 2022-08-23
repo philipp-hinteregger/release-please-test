@@ -46,7 +46,7 @@ jobs:
         GH_TOKEN: ${{ secrets.BOT_SECRET }}
       run: |
         npx release-please@^14.1.0 bootstrap \
-          --token="$GH_TOKEN" \ 
+          --token="$GH_TOKEN" \
           --repo-url=philipp-hinteregger/release-please-test \
           --release-type=go \
           --include-v-in-tags=false \
