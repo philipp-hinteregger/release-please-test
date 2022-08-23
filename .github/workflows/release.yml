@@ -49,5 +49,6 @@ jobs:
           --token="$GH_TOKEN" \
           --repo-url=philipp-hinteregger/release-please-test \
           --release-type=go \
-          --include-v-in-tags=false \
           --dry-run
+
+        echo "$version"
