@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.1.0](https://github.com/philipp-hinteregger/release-please-test/compare/v1.0.1...v1.1.0) (2022-08-23)
+
+
+### Features
+
+* Change workflow ([f964a08](https://github.com/philipp-hinteregger/release-please-test/commit/f964a0810adcd574dc23f6a6363303cc8dd8824d))
+
+
+### Bug Fixes
+
+* Change workflow ([190437a](https://github.com/philipp-hinteregger/release-please-test/commit/190437a01a460ad1bb60a96a892e577f1334f0ef))
+* Fix indentation ([d7a6b02](https://github.com/philipp-hinteregger/release-please-test/commit/d7a6b02bf2d1736d6eee878d0c55054c7bc9e43a))
+
 ## [1.0.1](https://github.com/philipp-hinteregger/release-please-test/compare/1.0.0...1.0.1) (2022-08-23)
 
 
