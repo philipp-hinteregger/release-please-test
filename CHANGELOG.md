@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.0.1](https://github.com/philipp-hinteregger/release-please-test/compare/1.0.0...1.0.1) (2022-08-23)
+
+
+### Bug Fixes
+
+* Change release-please command ([e3be2ff](https://github.com/philipp-hinteregger/release-please-test/commit/e3be2ffe143681356f2622fb2e82f0187eb91c0f))
+* Change release-please command ([c545811](https://github.com/philipp-hinteregger/release-please-test/commit/c54581166ca7cdeaa12abf0a9f64997f27db13fa))
+* Do some random changes ([f4670a6](https://github.com/philipp-hinteregger/release-please-test/commit/f4670a616a40ca2195a72be3ea1e7552243b7c16))
+
 ## 1.0.0 (2022-08-23)
 
 
