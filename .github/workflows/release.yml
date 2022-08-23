@@ -45,8 +45,7 @@ jobs:
         SEMVER_TYPE: ${{ github.event.inputs.semver-type }}
       run: |
         npx release-please@14.1.0 \
-        --dry-run \
-        --token ${{ secrets.BOT_SECRET }} \ 
-        --repo-url philipp-hinteregger/release-please-test \
-        --release-type go \
-        --version-file ./VERSION.txt
+        --token=${{ secrets.BOT_SECRET }} \ 
+        --repo-url=philipp-hinteregger/release-please-test \
+        --release-type=go \
+        --dry-run=true
