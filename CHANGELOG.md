@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/philipp-hinteregger/release-please-test/compare/v1.1.0...1.2.0) (2022-08-24)
+
+
+### Features
+
+* Add a version file ([ca27aef](https://github.com/philipp-hinteregger/release-please-test/commit/ca27aef0c116fbf021ecdeb9411a05f19454e3b1))
+
 ## [1.1.0](https://github.com/philipp-hinteregger/release-please-test/compare/v1.0.1...v1.1.0) (2022-08-23)
 
 
