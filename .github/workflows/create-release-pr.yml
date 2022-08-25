@@ -68,5 +68,4 @@ jobs:
         npx release-please@^14.1.1 release-pr \
           --token="$GH_TOKEN" \
           --repo-url=philipp-hinteregger/release-please-test \
-          --target-branch=$TARGET_BRANCH \
-          --prerelease=true
+          --target-branch=$TARGET_BRANCH
