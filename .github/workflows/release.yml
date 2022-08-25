@@ -59,7 +59,7 @@ jobs:
           --repo-url=philipp-hinteregger/release-please-test \
           --dry-run=true > release-please-output
 
-        echo "::set-output name=RELEASE_VERSION::$(cat release-please-output | grep "): release" | cut -d " " -f4)
+        echo "::set-output name=RELEASE_VERSION::$(cat release-please-output | grep '): release' | cut -d ' ' -f4)
 
     - name: Output new version
       env:
