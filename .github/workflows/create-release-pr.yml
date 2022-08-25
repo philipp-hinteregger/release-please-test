@@ -58,6 +58,12 @@ jobs:
       run: |
         echo $VERSION_OUT
 
+    - name: Output target branch
+      env:
+        TARGET_BRANCH: ${{ github.event.inputs.branches }}
+      run: |
+        echo $TARGET_BRANCH
+
     - name: Create release
       id: create_release
       env:
