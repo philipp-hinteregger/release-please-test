@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.0](https://github.com/philipp-hinteregger/release-please-test/compare/1.4.1...1.5.0) (2022-08-25)
+
+
+### Features
+
+* Add a new feature ([5b12b7e](https://github.com/philipp-hinteregger/release-please-test/commit/5b12b7e4a5f4f62be37a1521dcc03fb5571ec689))
+
 ## [1.4.1](https://github.com/philipp-hinteregger/release-please-test/compare/1.4.0...1.4.1) (2022-08-25)
 
 
