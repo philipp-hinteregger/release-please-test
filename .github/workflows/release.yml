@@ -5,9 +5,9 @@ on:
       - closed
 
 jobs:
-  if_merged:
-    if: github.event.pull_request.merged == true && ${{contains(github.event.pull_request.labels.*.name, format('autorelease{0} pending', ':'))}}
-    runs-on: ubuntu-latest
+  auto_release:
+    if: ${{ github.event.pull_request.merged == true && contains(github.event.pull_request.labels.*.name, format('autorelease{0} pending', ':')) }}
+    runs-on: ubuntu-20.04
     steps:
     - name: Release
       id: release
