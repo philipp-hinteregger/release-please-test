@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.4.1](https://github.com/philipp-hinteregger/release-please-test/compare/1.4.0...1.4.1) (2022-08-25)
+
+
+### Bug Fixes
+
+* Use existing action to extract the branch name ([05fb311](https://github.com/philipp-hinteregger/release-please-test/commit/05fb311e7e3bd5fae3e6d792d47f546237236cca))
+* Use the right action to extract the target branch ([afc9c4d](https://github.com/philipp-hinteregger/release-please-test/commit/afc9c4d2ce397cf8f3991cac15be8765dc15fce1))
+
 ## [1.4.0](https://github.com/philipp-hinteregger/release-please-test/compare/1.3.2...1.4.0) (2022-08-25)
 
 
