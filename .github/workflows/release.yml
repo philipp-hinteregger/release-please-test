@@ -71,9 +71,10 @@ jobs:
       id: create_release
       env:
         SEMVER_TYPE: ${{ github.event.inputs.semver-type }}
+        TARGET_BRANCH: ${{ github.event.inputs.branches }}
         GH_TOKEN: ${{ secrets.BOT_SECRET }}
       run: |
         npx release-please@^14.1.0 release-pr \
           --token="$GH_TOKEN" \
           --repo-url=philipp-hinteregger/release-please-test \
-          --prerelease=true
+          --target-branch=$TARGET_BRANCH
