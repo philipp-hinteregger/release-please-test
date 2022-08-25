@@ -60,5 +60,7 @@ jobs:
           --dry-run=true
 
     - name: Output new version
+      env:
+        VERSION_OUT: ${{ steps.version_number.outputs }}
       run: |
-        cat x-release-please.json
+        echo $VERSION_OUT
