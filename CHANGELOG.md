@@ -1,5 +1,24 @@
 # Changelog
 
+## [1.2.0](https://github.com/philipp-hinteregger/release-please-test/compare/v1.1.0...1.2.0) (2022-08-25)
+
+
+### Features
+
+* Add a version file ([ca27aef](https://github.com/philipp-hinteregger/release-please-test/commit/ca27aef0c116fbf021ecdeb9411a05f19454e3b1))
+* Add output for new version ([39b218e](https://github.com/philipp-hinteregger/release-please-test/commit/39b218e16f4ac7f3b71dc1c7b8573d57f3073ac4))
+* Extract version from release-please output ([7b6e68c](https://github.com/philipp-hinteregger/release-please-test/commit/7b6e68c395822d8efa277373d94ad378dec4be5c))
+* Introduce target-branch command line argument ([f705ae5](https://github.com/philipp-hinteregger/release-please-test/commit/f705ae5fe35d462eda76b99090ced2f4a2ca21e8))
+
+
+### Bug Fixes
+
+* Back to CLI ([5b337b8](https://github.com/philipp-hinteregger/release-please-test/commit/5b337b810f6d4b8816acf6583bbb00b265622867))
+* Fix command line argument ([f83fa0d](https://github.com/philipp-hinteregger/release-please-test/commit/f83fa0d1b285fcc909c4ef9012faf62f69790d35))
+* Fix syntax error in workflow ([cf6d48e](https://github.com/philipp-hinteregger/release-please-test/commit/cf6d48e9fc499877d1c01598f6baa84800daf7fe))
+* Fix syntax error in workflow ([672c714](https://github.com/philipp-hinteregger/release-please-test/commit/672c71436f50fb55718104463b80973031183f46))
+* New output ([7e6253c](https://github.com/philipp-hinteregger/release-please-test/commit/7e6253c86a56b663369b8dc1a82c8f56a47e01c8))
+
 ## [1.1.0](https://github.com/philipp-hinteregger/release-please-test/compare/v1.0.1...v1.1.0) (2022-08-23)
 
 
