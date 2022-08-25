@@ -1,0 +1,20 @@
+on:
+  pull_request:
+    types:
+      - closed
+
+jobs:
+  if_merged:
+    if: github.event.pull_request.merged == true && contains(github.event.pull_request.labels.*.name, 'autorelease')
+    runs-on: ubuntu-latest
+    steps:
+    - name: Release
+      id: release
+      env:
+        TARGET_BRANCH: ${{ github.event.pull_request.base.ref }}
+        GH_TOKEN: ${{ secrets.BOT_SECRET }}
+      run: |
+        npx release-please@^14.1.0 github-release \
+          --token="$GH_TOKEN" \
+          --repo-url=philipp-hinteregger/release-please-test \
+          --target-branch=$TARGET_BRANCH

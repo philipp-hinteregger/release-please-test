@@ -39,15 +39,6 @@ jobs:
         fetch-depth: 0
         token: ${{ secrets.BOT_SECRET }}
 
-#    - name: Create release
-#      id: release
-#      uses: google-github-actions/release-please-action@v3
-#      with:
-#        token: ${{ secrets.BOT_SECRET }}
-#        release-type: go
-#        include-v-in-tag: false
-#        extra-files: "x-release-please.json"
-
     - name: Find next version number
       id: version_number
       env:
