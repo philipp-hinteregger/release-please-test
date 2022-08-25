@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.2](https://github.com/philipp-hinteregger/release-please-test/compare/1.3.1...1.3.2) (2022-08-25)
+
+
+### Bug Fixes
+
+* Syntax errors ([6393507](https://github.com/philipp-hinteregger/release-please-test/commit/63935077dcd52594cce8dfe1735623a311d91703))
+
 ## [1.3.1](https://github.com/philipp-hinteregger/release-please-test/compare/1.3.0...1.3.1) (2022-08-25)
 
 
