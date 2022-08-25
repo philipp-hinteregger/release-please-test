@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/philipp-hinteregger/release-please-test/compare/1.3.2...1.4.0) (2022-08-25)
+
+
+### Features
+
+* Add random feature ([e6901de](https://github.com/philipp-hinteregger/release-please-test/commit/e6901de8747aa222d78516552fb16a4bc3a12d5c))
+
 ## [1.3.2](https://github.com/philipp-hinteregger/release-please-test/compare/1.3.1...1.3.2) (2022-08-25)
 
 
