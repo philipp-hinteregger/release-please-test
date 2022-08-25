@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.2](https://github.com/philipp-hinteregger/release-please-test/compare/1.4.1...1.4.2) (2022-08-25)
+
+
+### Bug Fixes
+
+* New patch ([2611f34](https://github.com/philipp-hinteregger/release-please-test/commit/2611f340487c0bb1063563b897b8225a37ab9d0a))
+
 ## [1.4.1](https://github.com/philipp-hinteregger/release-please-test/compare/1.4.0...1.4.1) (2022-08-25)
 
 
