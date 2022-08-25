@@ -58,9 +58,14 @@ jobs:
       run: |
         echo $VERSION_OUT
 
+    - name: Extract branch name
+        id: extract_branch
+        # see https://github.com/keptn/gh-action-extract-branch-name for details
+        uses: keptn/gh-action-extract-branch-name@main
+
     - name: Output target branch
       env:
-        TARGET_BRANCH: ${{ github.event.inputs.branches }}
+        TARGET_BRANCH: ${{ steps.extract_branch.outputs.BRANCH }}
       run: |
         echo $TARGET_BRANCH
 
@@ -68,7 +73,7 @@ jobs:
       id: create_release
       env:
         SEMVER_TYPE: ${{ github.event.inputs.semver-type }}
-        TARGET_BRANCH: ${{ github.event.inputs.branches }}
+        TARGET_BRANCH: ${{ steps.extract_branch.outputs.BRANCH }}
         GH_TOKEN: ${{ secrets.BOT_SECRET }}
       run: |
         npx release-please@^14.1.1 release-pr \
