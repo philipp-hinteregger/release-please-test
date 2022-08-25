@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.3.1](https://github.com/philipp-hinteregger/release-please-test/compare/1.3.0...1.3.1) (2022-08-25)
+
+
+### Bug Fixes
+
+* Fix conditional check in auto-release ([a3e02ce](https://github.com/philipp-hinteregger/release-please-test/commit/a3e02ce83ccf0eb693a108096c10fb852c50facd))
+* Fix syntax ([aa96479](https://github.com/philipp-hinteregger/release-please-test/commit/aa9647921ec52a0a4c6c482c1d7d402355b65a09))
+
 ## [1.3.0](https://github.com/philipp-hinteregger/release-please-test/compare/v1.2.0...1.3.0) (2022-08-25)
 
 
