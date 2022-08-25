@@ -9,6 +9,12 @@ jobs:
     if: ${{ github.event.pull_request.merged == true && contains(github.event.pull_request.labels.*.name, format('autorelease{0} pending', ':')) }}
     runs-on: ubuntu-20.04
     steps:
+    - name: Output target branch
+      env:
+        TARGET_BRANCH: ${{ github.event.pull_request.base.ref }}
+      run: |
+        echo $TARGET_BRANCH
+        
     - name: Release
       id: release
       env:
