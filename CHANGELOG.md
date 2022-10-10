@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.1](https://github.com/philipp-hinteregger/release-please-test/compare/1.5.0...1.5.1) (2022-10-10)
+
+
+### Bug Fixes
+
+* Create some fix ([3bcc93f](https://github.com/philipp-hinteregger/release-please-test/commit/3bcc93f3606e85f81de1025732a91dee4fbf377c))
+
 ## [1.5.0](https://github.com/philipp-hinteregger/release-please-test/compare/1.4.1...1.5.0) (2022-08-25)
 
 
