@@ -37,13 +37,13 @@ jobs:
       uses: actions/checkout@v3
       with:
         fetch-depth: 0
-        token: ${{ secrets.BOT_SECRET }}
+        token: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Find next version number
       id: version_number
       env:
         SEMVER_TYPE: ${{ github.event.inputs.semver-type }}
-        GH_TOKEN: ${{ secrets.BOT_SECRET }}
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         npx release-please@^14.1.0 release-pr \
           --token="$GH_TOKEN" \
@@ -75,7 +75,7 @@ jobs:
       env:
         SEMVER_TYPE: ${{ github.event.inputs.semver-type }}
         TARGET_BRANCH: ${{ steps.extract_branch.outputs.branch }}
-        GH_TOKEN: ${{ secrets.BOT_SECRET }}
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         npx release-please@^14.1.1 release-pr \
           --token="$GH_TOKEN" \
