@@ -1,9 +1,6 @@
 name: Create Release PR
 on:
   workflow_dispatch:
-    inputs:
-      semver-type:
-        required: false
     branches:
       - 'main'
       - '[0-9]+.[1-9][0-9]*.x'
@@ -14,25 +11,8 @@ defaults:
 jobs:
   prepare:
     name: Prepare release run
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
-    - name: Check SemVer input
-      env:
-        SEMVER_TYPE: ${{ github.event.inputs.semver-type }}
-      run: |
-        if [[ ! -z "$SEMVER_TYPE" ]]; then
-          echo "SemVer Type is defined. Checking for valid SemVer type..."
-          if [[ "$SEMVER_TYPE" == "major" ]] || [[ "$SEMVER_TYPE" == "minor" ]] || [[ "$SEMVER_TYPE" == "patch" ]]; then
-            echo "::notice::SemVer Type is correctly set to $SEMVER_TYPE! Continuing with this version bump..."
-          else
-            echo "::error::ERROR: Enforced SemVer does not match any of [major,minor,patch]!"
-            echo "Exiting..."
-            exit 1
-          fi
-        else
-          echo "::notice::No SemVer type defined, continuing with auto generated version number..."
-        fi
-
     - name: Checkout repo
       uses: actions/checkout@v3
       with:
@@ -42,10 +22,9 @@ jobs:
     - name: Find next version number
       id: version_number
       env:
-        SEMVER_TYPE: ${{ github.event.inputs.semver-type }}
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        npx release-please@^14.1.0 release-pr \
+        npx release-please@^14.17.0 release-pr \
           --token="$GH_TOKEN" \
           --repo-url=philipp-hinteregger/release-please-test \
           --dry-run=true > release-please-output
